@@ -1,10 +1,6 @@
 pipeline {
     agent any
-	tools {
-		maven 'mvn'
-	}
-
-    stages {
+	stages {
         stage('Build Artifact') {
             steps {
                 sh 'mvn clean package'
