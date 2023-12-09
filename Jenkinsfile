@@ -14,7 +14,7 @@ pipeline {
 		stage('Push Docker Image') {
            	   steps {
 			   withCredentials([usernamePassword(credentialsId: 'hub-creds', passwordVariable: 'hubPwd', usernameVariable: 'hubUser')]) {
-  				sh "docker log in -u ${hubUser} -p ${hubPwd}
+  				sh "docker login -u ${hubUser} -p ${hubPwd}
 				sh "docker push ehsan10331/project-app:0.0.1"   
 			}
 		}
