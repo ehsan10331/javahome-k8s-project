@@ -8,5 +8,5 @@ FROM openjdk:8-jdk-alpine
 LABEL "Ehsan Ali"
 VOLUME /tmp
 EXPOSE 8095
-COPY ./target/*.jar /app.jar
+COPY target/*.jar /app.jar
 CMD ["java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar"]
