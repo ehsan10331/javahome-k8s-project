@@ -9,4 +9,4 @@ LABEL "Ehsan Ali"
 VOLUME /tmp
 EXPOSE 8095
 COPY ./target/*.jar /app.jar
-CMD ["sh", "-c", "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar"]
+CMD ["java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar"]
