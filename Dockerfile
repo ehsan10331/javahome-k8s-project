@@ -5,7 +5,6 @@
 # Optionally pass an environment variable in case you want to override later
 # Container start up command: "java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar"
 FROM openjdk:8-jdk-alpine
-LABEL "ehsan"
 VOLUME /tmp
 EXPOSE 8095
 COPY target/*.jar /app.jar
